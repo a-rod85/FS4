@@ -1,5 +1,4 @@
-from django.shortcuts import render, HttpResponse
+from django.shortcuts   import render
 
-# Create your views here.
-def say_Hello(request):
-    return HTTPResponse("Hello!")
+def get_main_page(request):
+    return render(request, "main/main_page.html")
