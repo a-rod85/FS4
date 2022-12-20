@@ -1,5 +1,5 @@
 from django.db import models
-from django.utils.text import slugify
+
 # Create your models here.
 
 
@@ -9,7 +9,7 @@ class Meals(models.Model):
     people = models.IntegerField()
     price = models.DecimalField(max_digits=5, decimal_places=2)
     image = models.ImageField(upload_to='meals/')
-    slug = models.SlugField(blan=True, null=True)
+    slug = models.SlugField(blank=True, null=True)
 
 
 def save(self, *args, **kwargs):
@@ -17,6 +17,10 @@ def save(self, *args, **kwargs):
         self.slug = slugify(self.name)
     super(Meals, self).save(*args, **kwargs)
 
+
+class Meta:
+        verbose_name = 'meal'
+        verbose_name_plural = 'meals'
 
 def __str__(self):
     return self.name
