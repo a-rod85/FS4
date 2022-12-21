@@ -19,8 +19,9 @@ def save(self, *args, **kwargs):
 
 
 class Meta:
-        verbose_name = 'meal'
-        verbose_name_plural = 'meals'
+    verbose_name = 'meal'
+    verbose_name_plural = 'meals'
+
 
 def __str__(self):
     return self.name

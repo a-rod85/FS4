@@ -21,5 +21,6 @@ def save(self, *args, **kwargs):
         verbose_name = 'meal'
         verbose_name_plural = 'meals'
 
+
 def __str__(self):
     return self.name
