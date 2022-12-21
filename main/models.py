@@ -16,10 +16,10 @@ class Restaurant(models.Model):
         return self.name
 
 class Table(models.Model):
-    restaurant = models.ForeignKey("Restaurant", on_delete = models.PROTECT) 
-    table_number = models.CharField(max_length= 2, default= "0")
+    restaurant = models.ForeignKey("Restaurant", on_delete=models.PROTECT)
+    table_number = models.CharField(max_length=2, default="0")
     def __str__(self):
-        return self.table_number      
+        return self.table_number
 
 class Menu(models.Model):
     name = models.CharField(max_length=50)
