@@ -1,5 +1,4 @@
-"""django_restaurant URL Configuration
-
+"""main URL Configuration
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/3.2/topics/http/urls/
 Examples:
@@ -15,17 +14,15 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from main.views import get_main_page
-from django.conf import settings
-from django.conf.urls.static import static
-
+from system import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', get_main_page, name='get_main_page')
+
+
+
+
+
+
 
 ]
-
-
-urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
-urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
